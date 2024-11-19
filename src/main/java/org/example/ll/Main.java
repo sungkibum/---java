@@ -19,7 +19,17 @@ public class Main {
                 this.author = author;
             }
 
+            public int getId() {
+                return id;
+            }
 
+            public String getSaying() {
+                return saying;
+            }
+
+            public String getAuthor() {
+                return author;
+            }
         }
         Scanner sc = new Scanner(System.in);
         ArrayList<WiseSaying> wiseSayingList = new ArrayList<>();
@@ -48,6 +58,17 @@ public class Main {
                     String saying = wiseSaying.saying;
                     String author = wiseSaying.author;
                     System.out.println(id + " / " + saying + " / " + author);
+                }
+            } else if (order.equals("삭제")) {
+                System.out.print("?id=");
+                int idNum = sc.nextInt();
+
+                for (WiseSaying wiseSaying : wiseSayingList) {
+                    if (idNum == wiseSaying.getId()) {
+                        wiseSayingList.remove(wiseSaying);
+                        System.out.println(wiseSaying.getId() + "번 명언이 삭제되었습니다.");
+                        break;
+                    }
                 }
             }
         }
