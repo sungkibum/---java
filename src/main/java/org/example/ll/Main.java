@@ -62,13 +62,17 @@ public class Main {
             } else if (order.equals("삭제")) {
                 System.out.print("?id=");
                 int idNum = sc.nextInt();
-
+                boolean check = false;
                 for (WiseSaying wiseSaying : wiseSayingList) {
                     if (idNum == wiseSaying.getId()) {
                         wiseSayingList.remove(wiseSaying);
                         System.out.println(wiseSaying.getId() + "번 명언이 삭제되었습니다.");
+                        check = true;
                         break;
                     }
+                }
+                if (check == false) {
+                    System.out.println(idNum + "번 명언은 존재하지 않습니다.");
                 }
             }
         }
