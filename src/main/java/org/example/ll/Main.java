@@ -74,6 +74,26 @@ public class Main {
                 if (check == false) {
                     System.out.println(idNum + "번 명언은 존재하지 않습니다.");
                 }
+            } else if (order.equals("수정")) {
+                System.out.print("?id=");
+                int idNum = sc.nextInt();
+                sc.nextLine();
+                boolean check = false;
+                for (WiseSaying wiseSaying : wiseSayingList) {
+                    if (idNum == wiseSaying.getId()) {
+                        System.out.println("명언(기존) : " + wiseSaying.getSaying());
+                        System.out.print("명언 : ");
+                        wiseSaying.saying = sc.nextLine();
+                        System.out.println("작가(기존) : " + wiseSaying.getAuthor());
+                        System.out.print("작가 : ");
+                        wiseSaying.author = sc.nextLine();
+                        check = true;
+                        break;
+                    }
+                }
+                if (check == false) {
+                    System.out.println(idNum + "번 명언은 존재하지 않습니다.");
+                }
             }
         }
     }
