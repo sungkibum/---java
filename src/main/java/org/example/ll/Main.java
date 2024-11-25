@@ -1,5 +1,7 @@
 package org.example.ll;
 
+import org.example.ll.domain.wiseSaying.entity.WiseSaying;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,34 +9,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        class WiseSaying {
-            private int id;
-            private String saying;
-            private String author;
 
-            public WiseSaying(int id, String saying, String author) {
-                this.id = id;
-                this.saying = saying;
-                this.author = author;
-            }
-
-            public int getId() {
-                return id;
-            }
-
-            public String getSaying() {
-                return saying;
-            }
-
-            public String getAuthor() {
-                return author;
-            }
-
-            @Override
-            public String toString() {
-                return id + "\n" + saying + "\n" + author;
-            }
-        }
 
         // 디렉토리 생성
         String dirPath = "db/wiseSaying";
