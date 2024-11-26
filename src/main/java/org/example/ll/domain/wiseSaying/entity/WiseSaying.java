@@ -5,7 +5,19 @@ public class WiseSaying {
         public String saying;
         public String author;
 
-        public WiseSaying(int id, String saying, String author) {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setSaying(String saying) {
+        this.saying = saying;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public WiseSaying(int id, String saying, String author) {
             this.id = id;
             this.saying = saying;
             this.author = author;

@@ -9,11 +9,12 @@ import java.util.Scanner;
 public class WiseSayingService {
     private List<WiseSaying> wiseSayingList = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
-
+    private int idNum;
 
     public WiseSaying addWiseSaying(String saying, String author) {
         WiseSaying wiseSaying = new WiseSaying(0, saying, author);
         wiseSayingList.add(wiseSaying);
+        wiseSaying.setId(++idNum);
         return wiseSaying;
     }
     public List<WiseSaying> findAll() {
