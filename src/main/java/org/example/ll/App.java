@@ -24,6 +24,7 @@ public class App {
             } else if (order.equals("삭제")) {
                 wiseSayingController.actionDelete();
             } else if (order.equals("수정")) {
+                wiseSayingController.actionModify();
             }
         }
     }
