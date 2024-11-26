@@ -15,8 +15,6 @@ public class WiseSayingController {
 
 
 
-
-
     public void actionAdd() {
         System.out.print("명언 : ");
         String saying = sc.nextLine();
